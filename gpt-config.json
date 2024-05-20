@@ -1,0 +1,11 @@
+{
+  "name": "PowerShell Executor",
+  "description": "Execute PowerShell commands on your local machine.",
+  "version": "1.0",
+  "api": {
+    "openapi": "https://raw.githubusercontent.com/PrimeGoat/ps/main/openapi.yaml",  // Replace with the actual URL where `openapi.yaml` is hosted
+    "headers": {
+      "Authorization": "Bearer YOUR_API_KEY"
+    }
+  }
+}
