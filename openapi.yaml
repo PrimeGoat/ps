@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: PowerShell Executor API
+  description: API to execute PowerShell commands on the user's local machine.
+  version: 1.0.0
+paths:
+  /execute:
+    post:
+      summary: Execute a PowerShell command
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                command:
+                  type: string
+                  description: The PowerShell command to execute
+      responses:
+        '200':
+          description: Command executed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output:
+                    type: string
+                    description: The output of the command
+                  error:
+                    type: string
+                    description: Any error that occurred
+servers:
+  - url: https://slug-stunning-lizard.ngrok-free.app
